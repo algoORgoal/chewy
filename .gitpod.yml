@@ -1,5 +1,9 @@
 tasks:
-  - init: |
-      echo 'TODO: build project'
+  - name: strapi backend
+    before: |
+        nvm install 14.9.0
+        nvm use 14.9.0
+    init: |
     command: |
-      echo 'TODO: start app'
+        cd my-project
+        yarn develop
